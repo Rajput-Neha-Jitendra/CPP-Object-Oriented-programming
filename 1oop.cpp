@@ -2,7 +2,7 @@
 // C++ program to demonstrate 
 // accessing of data members 
  
-#include <bits/stdc++.h>
+#include <iostream>
 
 using namespace std;
 
