@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+// Hierarchical Inheritance 
+class Values {
+    protected:
+    double a, b;
+    public:
+    void initialize(int x, int y) {
+        a = x;
+        b = y;
+    }
+};
+
+class A : public Values {
+    public:
+    void add() {
+        cout<<"addition = "<<a+b<<endl;
+    }
+};
+
+class B : public Values {
+    public:
+    void subtract() {
+        cout<<"subtraction = "<<a-b<<endl;
+    }
+};
+
+int main() {
+  A obj1;
+  B obj2;
+  obj1.initialize(5,5);
+  obj1.add();
+  obj2.initialize(6,6);
+  obj2.subtract();
+  return 0;
+}
