@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+//Multilevel  Inheritance
+class A
+  {
+    public:
+   void demo_1()
+     {
+      cout<<"India"<<endl;
+      cout<<" || "<<endl;
+     }
+  };
+class B: public A
+  {
+   public:
+   void demo_2()
+   {
+    cout<<"Maharashtra"<<endl;
+    cout<<" || "<<endl;
+   }
+  };
+class C: public B
+  {
+   public:
+
+   void demo_3()
+   {
+   cout<<"Shirpur";
+   }
+  };
+int main()
+{
+ C obj;
+ obj.demo_1();
+ obj.demo_2();
+ obj.demo_3();
+}
