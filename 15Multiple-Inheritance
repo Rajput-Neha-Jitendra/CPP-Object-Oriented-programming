@@ -1,0 +1,47 @@
+
+#include<iostream>
+using namespace std;
+class base1 {
+  protected:
+    int x;
+  public:
+    void read_x() {
+      cout<<"Enter value of x : ";
+      cin>>x;
+    }
+    void show_x()
+    { cout<<"x= "<<x; }
+};
+class base2 {
+  protected:
+    int y;
+  public:
+    void read_y() {
+      cout<<"Enter value of y: ";
+      cin>>y;
+    }
+    void show_y()
+      { cout<<"\ny "<<y; }
+};
+class der: public base1,public base2 {
+  private:
+    int z;
+  public:
+    void mul() {
+      z=x*y;
+    }
+    void show_z ()
+      { 
+     cout<<"\nz = "<<z; 
+     }
+};
+int main() {
+  der d1;
+  d1.read_x();
+  d1.read_y(); 
+  d1.mul();
+  d1.show_x();
+  d1.show_y();
+  d1.show_z();
+  return 0;
+}
