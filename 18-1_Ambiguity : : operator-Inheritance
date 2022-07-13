@@ -1,0 +1,31 @@
+
+#include <iostream>
+using namespace std;
+//Avoiding ambiguity in Hybrid Inheritance using scope resolution operator (::)
+class A {
+    protected:
+    int a;
+};
+class B : public A {
+
+};
+class C : public A {
+
+};
+class D : public B, public C {
+    public:
+    void fun() {
+        B::a=7;
+        C::a=10;
+    }
+    void display() {
+        cout<<"a from B = "<<B::a<<endl;
+        cout<<"a from C = "<<C::a<<endl;        
+    }
+};
+int main() {
+  D obj;
+  obj.fun();
+  obj.display();
+  return 0;
+}
